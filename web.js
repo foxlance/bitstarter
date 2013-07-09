@@ -8,8 +8,8 @@ app.get('/', function(request, response) {
 	//var content = fs.readFileSync('index.html');
 	//response.send(content);
 	var content = fs.readFileSync('index.html', 'utf8');
-
-	var buffer = new Buffer(256);
+	console.log(content.length);
+	var buffer = new Buffer(content.length);
 	len = buffer.write(content, 0);
 	response.send(buffer.toString('utf8', 0, len));
 	
