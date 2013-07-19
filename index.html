@@ -10,6 +10,40 @@
     <script src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
     <link href='http://fonts.googleapis.com/css?family=Oxygen' rel='stylesheet' type='text/css'>
 	<style type="text/css">
+		
+/* Large desktop */
+      @media (min-width: 980px) { 
+        body {
+         padding-top: 60px;
+        }
+       .linediv-l {
+         border-right: 1px white solid;
+        }
+       .linediv-r {
+         border-left: 1px white solid;
+       }
+      }
+
+      /* Landscape phones and down */
+      @media (min-width:801px; max-width: 979px) {
+       .linediv-l {
+         border-bottom:none;
+       }
+       .linediv-r {
+         border-top:none;
+       }
+      }
+
+      /* Landscape phones and down */
+      @media (max-width: 800px) {
+       .linediv-l {
+         border-bottom: 1px white solid;
+       }
+       .linediv-r {
+         border-top: 1px white solid;
+       }
+      }
+
 		body {
         padding-top: 20px;
         padding-bottom: 60px;
@@ -81,20 +115,13 @@
         border-radius: 0 3px 3px 0;
       }
 
-		.navigation, .pitch, .section1, .section2, .faq, .footer {
-			padding:10px 0px 10px 0px;
+		
+		.action {
+			color: #fff;
+			background-color:#343434;
 		}
-		.video, .thermometer, .order, .social {
-			border:1px dotted;
+		.statistics, .order{
 			text-align:center;
-		}
-		.video {
-			height:124px;
-			line-height:124px;
-		}
-		.thermometer, .order, .social {
-			height:40px;
-			line-height:40px;
 		}
 
 
@@ -135,10 +162,48 @@
 		
 		<div class="row-fluid pitch">
 			<div class="span6 video">Video</div>
-			<div class="span6">
-				<div class="thermometer">Thermometer</div>
-				<div class="order">Order</div>
-				<div class="social">Social</div>
+			<div class="span6 action">
+			
+				<div class="span8 offset2">
+					<div class="statistics">
+						<div class="span4">
+							<!-- linediv-l and linediv-r give dividing lines that look
+			                different in horizontal and vertical layouts, illustrating
+			                media queries. -->
+							<div class="linediv-l">
+								<h3>1000</h3> <p>backers</p>
+							</div>
+						</div>
+						<div class="span4">
+							<div class="linediv-c">
+								<h3>$6000</h3> <p>of $10,000</p>
+							</div>
+						</div>
+						<div class="span4">
+							<div class="linediv-r">
+								<h3>10</h3> <p>days left</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="span10 offset1">
+					<div class="thermometer">	
+						<div class="progress">
+							<div class="bar bar-success" style="width: 45%;"></div>
+							<div class="bar bar-warning" style="width: 55%;"></div>
+						</div>				
+					</div>
+				</div>
+				<div class="span8 offset2">
+					<div class="order"><a class="btn btn-success" href="#">Order Now</a></div>
+				</div>
+
+				<div class="span8 offset2">
+					<div class="social">Social</div>
+				</div>
+				
+
+
 			</div>
 		</div>
 		<div class="row-fluid section1">
